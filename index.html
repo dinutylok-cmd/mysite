@@ -8,20 +8,21 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #0b0e11;
+            background-color: #0b0e11; /* Темный фон */
             color: #ffffff;
             font-family: 'Consolas', 'Monaco', monospace;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            overflow: hidden;
         }
 
         .main-container {
             display: flex;
             align-items: center;
-            gap: 60px; /* Расстояние между текстом и фото */
-            margin-top: -10vh; /* Чуть выше центра */
+            gap: 50px; /* Расстояние между текстом и аватаркой */
+            margin-top: -15vh; /* Поднимаем выше центра */
         }
 
         .text-block {
@@ -36,16 +37,54 @@
         }
 
         .key {
-            color: #58a6ff;
+            color: #58a6ff; /* Голубой цвет для заголовков */
             margin-right: 10px;
         }
 
+        .value {
+            color: #ffffff;
+        }
+
         .avatar {
-            width: 200px; /* Размер аватарки */
-            height: 200px;
-            border: 1px solid #30363d; /* Тонкая рамка, чтобы не сливалось */
+            width: 220px; /* Размер аватарки под размер текста */
+            height: 220px;
             object-fit: cover;
-            /* Если хочешь круглую — раскомментируй строку ниже */
+            border: 1px solid #30363d; /* Еле заметная рамка */
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 18px;
+            background: #58a6ff;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="text-block">
+            <div class="line"><span class="key">NAME:</span><span class="value">твой ник</span></div>
+            <div class="line"><span class="key">STATUS:</span><span class="value">active</span></div>
+            <div class="line"><span class="key">INFO:</span><span class="value">здесь твоя инфа</span></div>
+            <div class="line"><span class="key">SKILLS:</span><span class="value">python / c++ / steam</span></div>
+            <div class="line"><span class="key">LOC:</span><span class="value">earth</span></div>
+            <div class="line"><span class="value">любая рандомная строка</span><span class="cursor"></span></div>
+        </div>
+
+        <img src="1000878476.jpg" alt="avatar" class="avatar">
+    </div>
+
+</body>
+</html>
             /* border-radius: 50%; */
         }
 
