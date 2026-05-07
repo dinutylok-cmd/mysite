@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0b0e11;
+            color: #ffffff;
+            font-family: 'Consolas', 'Monaco', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .main-container {
+            display: flex;
+            align-items: center;
+            gap: 60px; /* Расстояние между текстом и фото */
+            margin-top: -10vh; /* Чуть выше центра */
+        }
+
+        .text-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .line {
+            font-size: 18px;
+            line-height: 1.8;
+            white-space: nowrap;
+        }
+
+        .key {
+            color: #58a6ff;
+            margin-right: 10px;
+        }
+
+        .avatar {
+            width: 200px; /* Размер аватарки */
+            height: 200px;
+            border: 1px solid #30363d; /* Тонкая рамка, чтобы не сливалось */
+            object-fit: cover;
+            /* Если хочешь круглую — раскомментируй строку ниже */
+            /* border-radius: 50%; */
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 18px;
+            background: #58a6ff;
+            margin-left: 5px;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="text-block">
+            <div class="line"><span class="key">NAME:</span><span class="value">твой ник</span></div>
+            <div class="line"><span class="key">STATUS:</span><span class="value">active</span></div>
+            <div class="line"><span class="key">INFO:</span><span class="value">пиши тут что хочешь</span></div>
+            <div class="line"><span class="key">SKILLS:</span><span class="value">python / c++ / afk</span></div>
+            <div class="line"><span class="key">LOC:</span><span class="value">earth</span></div>
+            <div class="line"><span class="value">просто любая рандомная строка</span><span class="cursor"></span></div>
+        </div>
+
+        <img src="ТВОЯ_ССЫЛКА_НА_ФОТО" alt="avatar" class="avatar">
+    </div>
+
+</body>
+</html>
