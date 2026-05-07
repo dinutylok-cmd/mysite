@@ -8,7 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #0b0e11; /* Темный фон */
+            background-color: #0b0e11;
             color: #ffffff;
             font-family: 'Consolas', 'Monaco', monospace;
             display: flex;
@@ -20,14 +20,16 @@
 
         .main-container {
             display: flex;
+            flex-direction: row; /* Строго в ряд */
             align-items: center;
-            gap: 50px; /* Расстояние между текстом и аватаркой */
-            margin-top: -15vh; /* Поднимаем выше центра */
+            gap: 40px; 
+            margin-top: -10vh;
         }
 
         .text-block {
             display: flex;
             flex-direction: column;
+            text-align: left;
         }
 
         .line {
@@ -37,19 +39,20 @@
         }
 
         .key {
-            color: #58a6ff; /* Голубой цвет для заголовков */
+            color: #58a6ff;
             margin-right: 10px;
         }
 
-        .value {
-            color: #ffffff;
+        .avatar-container {
+            flex-shrink: 0; /* Чтобы фотку не сжимало */
         }
 
         .avatar {
-            width: 220px; /* Размер аватарки под размер текста */
-            height: 220px;
+            width: 250px;
+            height: 250px;
             object-fit: cover;
-            border: 1px solid #30363d; /* Еле заметная рамка */
+            border: 1px solid #30363d;
+            display: block;
         }
 
         .cursor {
@@ -80,43 +83,9 @@
             <div class="line"><span class="value">любая рандомная строка</span><span class="cursor"></span></div>
         </div>
 
-        <img src="1000878476.jpg" alt="avatar" class="avatar">
-    </div>
-
-</body>
-</html>
-            /* border-radius: 50%; */
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 8px;
-            height: 18px;
-            background: #58a6ff;
-            margin-left: 5px;
-            animation: blink 1s infinite;
-            vertical-align: middle;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="main-container">
-        <div class="text-block">
-            <div class="line"><span class="key">NAME:</span><span class="value">твой ник</span></div>
-            <div class="line"><span class="key">STATUS:</span><span class="value">active</span></div>
-            <div class="line"><span class="key">INFO:</span><span class="value">пиши тут что хочешь</span></div>
-            <div class="line"><span class="key">SKILLS:</span><span class="value">python / c++ / afk</span></div>
-            <div class="line"><span class="key">LOC:</span><span class="value">earth</span></div>
-            <div class="line"><span class="value">просто любая рандомная строка</span><span class="cursor"></span></div>
+        <div class="avatar-container">
+            <img src="1000878476.jpg" alt="avatar" class="avatar">
         </div>
-
-        <img src="ТВОЯ_ССЫЛКА_НА_ФОТО" alt="avatar" class="avatar">
     </div>
 
 </body>
